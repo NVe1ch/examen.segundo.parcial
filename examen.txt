@@ -1,0 +1,71 @@
+
+import java.util.Scanner;
+class evaluacion {
+  
+    public static int arreglos;
+    private static String nombres[];
+    private static int codigos[];
+    private static int n1[];
+    private static int n2[];
+    private static int n3[];
+    private static int nf[];
+    public static int suma = 0;
+    public static int promedio = 0;
+    public static void main (String[]args){
+      menu();
+    }
+        public static void menu(){
+           Scanner leer = new Scanner (System.in);
+          String opcion;
+          do{
+            opcion = JOptionPane.showInputDialog(" inscripcion de estudiantes nuevos "+" \1. ingresar estudiantes \ 2. modificar nota \ 3. eliminar estudiante \ 4. listar estudiantes \ 0. salir"+"\n-------\ningrese las opciones [1-4]: ");
+            switch(opcion){
+              case "1":
+                agregar();
+                break;
+              case "2":
+                modificar();
+                break;
+              case "3":
+                buscar();
+                break;
+                case"4":
+                listar();
+                break;
+              case "0":
+                System.exit(0);
+                break;
+              default:
+                break;
+            
+            }while(true);
+          }
+            public static void agregar(){
+            arreglos= Interger.parseInt(JOptionPane.showInputDialog("¿de que tamaño 
+            desea su arreglo?"));
+            nombres=new String [arreglos];
+            codigos=new int [arreglos];
+            n1 = new int [arreglos];
+            n2 = new int [arreglos];
+            n3 = new int [arreglos];
+            nf = new int [arreglos];
+            for (int contador=0; contador < codigos.length; contador++)
+              codigos[contador]= JOptionPane.showInputDialog("codigo del estudiante: ");
+            for(int contador=0; contador < nombres.length; contador++ )
+              nombres[contador]=JOptionPane.showInputDialog("nombre del estudiante");
+      for(int contador=0; contador < n1.length; contador++)
+            n1[contador]=Integer.parseInt(JOptionPane.showInputDialog("Cual es la nota 1 de "+nombres[contador]+"?"));  
+      for(int contador=0; contador < n2.length; contador++)
+            n2[contador]=Integer.parseInt(JOptionPane.showInputDialog("Cual es la nota 2 de "+nombres[contador]+"?")); 
+      for(int contador=0; contador < n3.length; contador++)
+            n3[contador]=Integer.parseInt(JOptionPane.showInputDialog("Cual es la nota 3 de "+nombres[contador]+"?"));
+      for(int contador=0; contador < nf.length; contador++)
+            nf[contador]=Integer.parseInt(JOptionPane.showInputDialog("Cual es la nota 4 de "+nombres[contador]+"?"));     
+      for (int i = 0; i<n1.length; i++){
+          for (int j = 0; j<n2.length; j++){
+              for (int k = 0; k<n3.length; k++){
+                  for (int f = 0; f<nf.length; f++){
+ 
+
+     
+ 
